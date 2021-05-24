@@ -3,15 +3,15 @@ pragma solidity ^0.4.24;
 // ----------------------------------------------------------------------------
 // Sample token contract
 //
-// Symbol        : LCST
-// Name          : LCS Token
+// Symbol        : PRY
+// Name          : PryceCoin
 // Total supply  : 100000
-// Decimals      : 2
-// Owner Account : 0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe
+// Decimals      : 18
+// Owner Account : 0x93119B8fE408E685570b5DD539afa811AE3517f5
 //
 // Enjoy.
 //
-// (c) by Juan Cruz Martinez 2020. MIT Licence.
+// (c) by Stephen Pryce 2021. MIT Licence.
 // ----------------------------------------------------------------------------
 
 
@@ -71,7 +71,7 @@ contract ApproveAndCallFallBack {
 /**
 ERC20 Token, with the addition of symbol, name and decimals and assisted token transfers
 */
-contract LCSTToken is ERC20Interface, SafeMath {
+contract PryceCoin is ERC20Interface, SafeMath {
     string public symbol;
     string public  name;
     uint8 public decimals;
@@ -85,12 +85,12 @@ contract LCSTToken is ERC20Interface, SafeMath {
     // Constructor
     // ------------------------------------------------------------------------
     constructor() public {
-        symbol = "LCST";
-        name = "LCS Token";
-        decimals = 2;
+        symbol = "PRY";
+        name = "PryceCoin";
+        decimals = 18;
         _totalSupply = 100000;
-        balances[0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe] = _totalSupply;
-        emit Transfer(address(0), 0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe, _totalSupply);
+        balances[0x93119B8fE408E685570b5DD539afa811AE3517f5] = _totalSupply;
+        emit Transfer(address(0), 0x93119B8fE408E685570b5DD539afa811AE3517f5, _totalSupply);
     }
 
 
